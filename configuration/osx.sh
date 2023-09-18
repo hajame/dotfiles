@@ -30,14 +30,17 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 echo "Enable subpixel font rendering on non-Apple LCDs"
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-# echo "Enable the 2D Dock"
-# defaults write com.apple.dock no-glass -bool true
+echo "Enable the 2D Dock"
+defaults write com.apple.dock no-glass -bool true
 
-# Automatically hide and show the Dock
-# defaults write com.apple.dock autohide -bool true
+echo "Automatically hide and show the Dock"
+defaults write com.apple.dock autohide -bool true
 
-# echo "Make Dock icons of hidden applications translucent"
-# defaults write com.apple.dock showhidden -bool true
+echo "Remove Dock hide and show animation"
+defaults write com.apple.dock autohide-time-modifier -int 0
+
+echo "Make Dock icons of hidden applications translucent"
+defaults write com.apple.dock showhidden -bool true
 
 #echo "Enable iTunes track notifications in the Dock"
 #defaults write com.apple.dock itunes-notifications -bool true
@@ -67,14 +70,14 @@ defaults write com.apple.finder ShowPathbar -bool true
 echo "Show Status bar in Finder"
 defaults write com.apple.finder ShowStatusBar -bool true
 
-# echo "Expand print panel by default"
+echo "Expand print panel by default"
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 
-#echo "Disable the “Are you sure you want to open this application?” dialog"
-defaults write com.apple.LaunchServices LSQuarantine -bool false
+# echo "Disable the “Are you sure you want to open this application?” dialog for downloaded applications"
+# defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-#echo "Disable shadow in screenshots"
-#defaults write com.apple.screencapture disable-shadow -bool true
+echo "Disable shadow in screenshots"
+defaults write com.apple.screencapture disable-shadow -bool true
 
 # echo "Enable highlight hover effect for the grid view of a stack (Dock)"
 # defaults write com.apple.dock mouse-over-hilte-stack -bool true
@@ -102,10 +105,10 @@ echo "Set a shorter Delay until key repeat"
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 #echo "Disable auto-correct"
-#defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-# Disable opening and closing window animations
-# defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+Disable opening and closing window animations
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 
 # echo "Disable disk image verification"
 # defaults write com.apple.frameworks.diskimages skip-verify -bool true
