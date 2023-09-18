@@ -1,0 +1,15 @@
+#!/bin/bash
+BRANCH=$( git symbolic-ref --short HEAD )
+TASK_REGEX="DEV-[0-9]+"
+TASK_NO=$( echo "${BRANCH}" | grep -oE "${TASK_REGEX}" | tr '\n' ' '  | awk '{print $NF}' );
+if [ -n "$TASK_NO" ]
+then
+    BRANCH_IN_COMMIT=$(grep "${TASK_NO}""${1}")
+    IS_NUMBER_ALREADY_ADDED="$?"
+    if [ "${IS_NUMBER_ALREADY_ADDED}" -ne "0" ]
+    then
+        COMMIT_MSG_FILEPATH="${1}"
+        # append task number at the start of commit message
+        sed -i '.bak' "1s/^/$TASK_NO /" "$COMMIT_MSG_FILEPATH"
+    fi
+fi
