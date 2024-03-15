@@ -1,0 +1,10 @@
+[user]
+	name = hajame
+	email = hajame@example.com
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+[includeIf "gitdir:~/projects/haja_corporate/"]
+    path = ~/projects/haja_corporate/.gitconfig_include
+[includeIf "gitdir:~/projects/learning/"]
+    path = ~/projects/learning/.gitconfig_include
