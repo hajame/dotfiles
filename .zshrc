@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+PATH="/usr/local/bin:$PATH"
 PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
 
 
@@ -72,7 +74,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker docker-compose)
+plugins=(git docker docker-compose aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,9 +95,17 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+#-------------------------
+# iTerm
+#-------------------------
+bindkey "[D" backward-word   # ⌥ + ←/→   move one word backward/forward
+bindkey "[C" forward-word
+# fn + ←/→   move to beginning/end of line
+
+
 # JAVA HOME IS SET BY THIS EXECUTABLE
 # export JAVA_HOME="$(/usr/libexec/java_home -v 14.0)"
-export JAVA_HOME="$(/usr/libexec/java_home)"
+# export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -138,6 +148,11 @@ alias please-make-git-status-faster-for-this-repo="git config core.untrackedCach
 # remove branches that have been merged, edit list of branches to be deleted (here in VIM) before deletion
 alias gdel="git branch --merged >/tmp/merged-branches && vim /tmp/merged-branches && xargs git branch -d </tmp/merged-branches"
 
+# Switch local git user (for current repo)
+# [SHOULD NOT BE NEEDED]
+# --- use Conditional Includes instead (https://git-scm.com/docs/git-config#_conditional_includes)
+alias ghajame="git config --local user.email 'hajame@posteo.fi' && git config --local user.name 'hajame'"
+alias ghajaknow="git config --local user.email 'Harri.Mehtaelae@knowit.fi' && git config --local user.name 'Harri Mehtälä'"
 
 #---------------------------
 # Docker / Kubernetes
@@ -159,8 +174,11 @@ alias pods="kubectl get pods -A"
 #---------------------------
 # Misc
 #---------------------------
+
+# VIM
 alias vrc="vim ~/.vimrc"
 
+# Create IBAN, BRN, HETU
 alias iban="curl -s https://www.telepartikkeli.net/tunnusgeneraattori/Home/GenerateIban -d \"IbanAmount=1&GroupIbanNumber=true&GroupIbanNumber=false&WeightLargeBanks=false\" | cut -d'<' -f 1 | tr -d '\n' | pbcopy"
 alias brn="curl -s https://www.telepartikkeli.net/tunnusgeneraattori/Home/GenerateCompanyId -d \"CidAmount=1\" | cut -d'<' -f 1 | pbcopy"
 alias hetu="curl -s https://www.telepartikkeli.net/tunnusgeneraattori/Home/GenerateID -d \"YearOfBirth=&YearOfBirthStart=&YearOfBirthEnd=&Men=true&Men=false&Women=true&Women=false&OnlyTempHetus=false&Law2023=false&PidAmount=1\" | cut -d'<' -f 1 | pbcopy"
@@ -171,5 +189,12 @@ alias hetu="curl -s https://www.telepartikkeli.net/tunnusgeneraattori/Home/Gener
 # alias blvt="mvn clean install -U -T 1C -PFoo,Bar,asd -DskipTests -Djacoco.skip=true -DtargetEnv=foo_bar"
 
 
+# "LEAVE AT THE END" ------------------------------------------
 
+# Node version manager
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# The "z" program, I guess this must be the last one?
 . /usr/local/etc/profile.d/z.sh
