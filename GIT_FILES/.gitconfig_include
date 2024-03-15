@@ -1,0 +1,5 @@
+# For each project directory, add this include file with user config:
+[user]
+	name = hajame
+	email = hajame@example.com
+
