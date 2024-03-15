@@ -189,6 +189,16 @@ alias hetu="curl -s https://www.telepartikkeli.net/tunnusgeneraattori/Home/Gener
 #-------------------------------------------------
 # alias blvt="mvn clean install -U -T 1C -PFoo,Bar,asd -DskipTests -Djacoco.skip=true -DtargetEnv=foo_bar"
 
+#-------------------------------------------------
+# Amazon Web Services
+#-------------------------------------------------
+
+alias list-s3="aws s3 ls --profile PROFILE_NAME"
+alias aws-login="aws sso login --profile PROFILE_NAME"
+
+# SWITCHING AWS PROFILES:
+# asp PROFILE_NAME login
+
 
 # "LEAVE AT THE END" ------------------------------------------
 
