@@ -177,6 +177,7 @@ alias pods="kubectl get pods -A"
 
 # VIM
 alias vrc="vim ~/.vimrc"
+alias sshconfig="vim ~/.ssh/config"
 
 # Create IBAN, BRN, HETU
 alias iban="curl -s https://www.telepartikkeli.net/tunnusgeneraattori/Home/GenerateIban -d \"IbanAmount=1&GroupIbanNumber=true&GroupIbanNumber=false&WeightLargeBanks=false\" | cut -d'<' -f 1 | tr -d '\n' | pbcopy"
