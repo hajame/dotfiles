@@ -76,6 +76,10 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git docker docker-compose aws)
 
+# BREW autocompletion, must be before source oh-my-zsh
+# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
