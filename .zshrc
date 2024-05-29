@@ -189,6 +189,26 @@ alias brn="curl -s https://www.telepartikkeli.net/tunnusgeneraattori/Home/Genera
 alias hetu="curl -s https://www.telepartikkeli.net/tunnusgeneraattori/Home/GenerateID -d \"YearOfBirth=&YearOfBirthStart=&YearOfBirthEnd=&Men=true&Men=false&Women=true&Women=false&OnlyTempHetus=false&Law2023=false&PidAmount=1\" | cut -d'<' -f 1 | pbcopy"
 
 #-------------------------------------------------
+# Node
+#-------------------------------------------------
+
+alias npm-reset-registry='npm config set registry https://registry.npmjs.org/'
+
+#-------------------------------------------------
+# JAVA
+#-------------------------------------------------
+alias java-17="export JAVA_HOME=`/usr/libexec/java_home -v 17`"
+alias java-21="export JAVA_HOME=`/usr/libexec/java_home -v 21`"
+
+# Selected
+java-17
+
+#-------------------------------------------------
+# Gradle
+#-------------------------------------------------
+
+alias grw="./gradlew"
+#-------------------------------------------------
 # Maven
 #-------------------------------------------------
 # alias blvt="mvn clean install -U -T 1C -PFoo,Bar,asd -DskipTests -Djacoco.skip=true -DtargetEnv=foo_bar"
@@ -200,7 +220,10 @@ alias hetu="curl -s https://www.telepartikkeli.net/tunnusgeneraattori/Home/Gener
 alias list-s3="aws s3 ls --profile PROFILE_NAME"
 alias aws-login="aws sso login --profile PROFILE_NAME"
 
-# SWITCHING AWS PROFILES:
+# SWITCH AWS PROFILE:
+# asp PROFILE_NAME
+
+# Login and switch AWS profile:
 # asp PROFILE_NAME login
 
 
@@ -212,4 +235,4 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # The "z" program, I guess this must be the last one?
-. /usr/local/etc/profile.d/z.sh
+. /opt/homebrew/etc/profile.d/z.sh
