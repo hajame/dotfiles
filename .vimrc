@@ -7,4 +7,4 @@ set cursorline
 set clipboard=unnamed
 set autoindent
 colorscheme elflord
-
+set re=0
