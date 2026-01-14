@@ -1,95 +1,96 @@
+tap "hashicorp/tap"
 tap "homebrew/bundle"
-# Microsoft Azure CLI 2.0
-# brew "azure-cli"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
-# International domain name library (IDNA2008, Punycode and TR46)
-brew "libidn2"
-# C library implementing the SSH2 protocol
-brew "libssh2"
-# Open source suite of directory software
-brew "openldap"
-# Get a file from an HTTP, HTTPS or FTP server
-brew "curl"
-# Library for manipulating PNG images
+tap "localstack/tap"
+tap "oven-sh/bun"
+tap "thegreenwebfoundation/carbon-aware-tools"
+brew "bash"
+brew "bash-completion@2"
 brew "libpng"
-# Software library to render fonts
 brew "freetype"
-# XML-based font configuration API for X Windows
 brew "fontconfig"
-# JPEG image codec that aids compression and decompression
+brew "coreutils"
+brew "openssl@3"
+brew "libssh2"
+brew "curl"
 brew "jpeg-turbo"
-# Library for JPEG-2000 image manipulation
 brew "openjpeg"
-# Interpreter for PostScript and PDF
 brew "ghostscript"
-# Distributed revision control system
 brew "git"
-# Tool Command Language
 brew "tcl-tk"
-# Tcl/Tk UI for the git revision control system
 brew "git-gui"
-# Convert HTML to PDF or PostScript
+brew "gradle"
 brew "htmldoc"
-# Lightweight and flexible command-line JSON processor
+brew "icu4c@76"
 brew "jq"
-# Java-based project management
+brew "libidn2"
 brew "maven"
-# Run a Kubernetes cluster locally
-# brew "minikube"
-# HTTP/2 C Library
+brew "minikube"
 brew "nghttp2"
-# Cryptography and SSL/TLS Toolkit
+brew "nvm"
+brew "openjdk@17"
 brew "openssl@1.1"
-# Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Internet file retriever
+brew "tree"
 brew "wget"
-# Tracks most-used directories to make cd smarter
 brew "z"
-# Automatic tiling window manager similar to xmonad
+brew "oven-sh/bun/bun"
+brew "thegreenwebfoundation/carbon-aware-tools/grid-intensity"
 cask "amethyst"
-# Prevents your sleeping computer from connecting to Bluetooth accessories
+cask "avidemux"
 cask "bluesnooze"
-# Free and open-source web browser
 cask "chromium"
-# Clipboard manager with advanced features
 cask "copyq"
-# Universal database tool and SQL client
 cask "dbeaver-community"
-# Kubernetes IDE
-# cask "lens"
-# Free cross-platform office suite, fresh version
+cask "docker-desktop"
+cask "firefox"
+cask "google-chrome"
+cask "iterm2"
+cask "jetbrains-toolbox"
 cask "libreoffice"
-# Visual tool to design, develop and administer MySQL servers
-# cask "mysqlworkbench"
-# Collaboration platform for API development
+cask "mattermost"
+cask "netnewswire"
+cask "obsidian"
+cask "pomatez"
 cask "postman"
-# Instant messaging application focusing on security
-# cask "signal"
-# Music streaming service
+cask "slack"
 cask "spotify"
-# Open-source code editor
 cask "visual-studio-code"
+cask "vlc"
 vscode "adpyke.vscode-sql-formatter"
-vscode "DotJoshJohnson.xml"
+vscode "docker.docker"
+vscode "dotjoshjohnson.xml"
+vscode "fosshaas.fontsize-shortcuts"
 vscode "george-alisson.html-preview-vscode"
-vscode "GrapeCity.gc-excelviewer"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "grapecity.gc-excelviewer"
+vscode "hashicorp.terraform"
+vscode "mdickin.markdown-shortcuts"
 vscode "mechatroner.rainbow-csv"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-toolsai.jupyter"
 vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
 vscode "ms-toolsai.vscode-jupyter-cell-tags"
 vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "redhat.ansible"
 vscode "redhat.java"
+vscode "redhat.vscode-yaml"
+vscode "samuelcolvin.jinjahtml"
 vscode "streetsidesoftware.code-spell-checker"
-vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
-vscode "VisualStudioExptTeam.vscodeintellicode"
+vscode "tyriar.sort-lines"
+vscode "vscjava.migrate-java-to-azure"
+vscode "vscjava.vscode-gradle"
 vscode "vscjava.vscode-java-debug"
 vscode "vscjava.vscode-java-dependency"
 vscode "vscjava.vscode-java-pack"
 vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-java-upgrade"
 vscode "vscjava.vscode-maven"
